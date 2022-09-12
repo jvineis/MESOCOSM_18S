@@ -66,7 +66,7 @@ This git contains the code and steps to process the v4 region of the 18S rRNA ge
     prinseq-lite.pl -fastq ${SAMPLE}-R1.fastq -trim_to_len 240 -out_good ${SAMPLE}-R1-prinseq
     prinseq-lite.pl -fastq ${SAMPLE}-R2.fastq -trim_to_len 240 -out_good ${SAMPLE}-R2-prinseq
     
-##### Then you can run the merging script on the trimmed sequences. But first you will need to create the *.ini files for this. You can do this by editing your 00_DEMULTIPLEXING_REPORT and then generating the *ini files. you will just have to be careful that you activate the proper conda environments when running these commands. 
+##### Then you can run the merging script on the trimmed sequences. But first you will need to create the .ini files for this. You can do this by editing your 00_DEMULTIPLEXING_REPORT and then generating the ini files. you will just have to be careful that you activate the proper conda environments when running these commands. 
 
     sed 's/R1/R1-prinseq/g' 00_DEMULTIPLEXING_REPORT | sed 's/R2/R2-prinseq/g' > 00_DEMULTIPLEXING_REPORT-prinseq
     
@@ -74,7 +74,7 @@ This git contains the code and steps to process the v4 region of the 18S rRNA ge
 
     sample	num_indexes_found	num_reads_stored	r1	r2
 
-####### The 00_DEMULTIPLEXING_REPORT-prinseq should look something like this
+###### The 00_DEMULTIPLEXING_REPORT-prinseq should look something like this
 
     sample	num_indexes_found	num_reads_stored	r1	r2
     B3D2T1_18S-prinseq  91686	91686	B3D2T1_18S-R1-prinseq.fastq	    B3D2T1_18S-R2-prinseq.fastq
@@ -83,7 +83,7 @@ This git contains the code and steps to process the v4 region of the 18S rRNA ge
     B1D5T1A_18S-prinseq	59856	59856	B1D5T1A_18S-R1-prinseq.fastq	B1D5T1A_18S-R2-prinseq.fastq
     B1D4T1A_18S-prinseq	56279   56279	B1D4T1A_18S-R1-prinseq.fastq	B1D4T1A_18S-R2-prinseq.fastq
     
-##### Now you can generate the *ini files and run the merging. 
+##### Now you can generate the ini files and run the merging. 
     
     iu-gen-configs 00_DEMULTIPLEXING_REPORT-prinseq
     
