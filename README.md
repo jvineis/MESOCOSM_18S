@@ -29,10 +29,10 @@ This git contains the code and steps to process the v4 region of the 18S rRNA ge
     
 #### Third, merge the demultiplexed sequences
 
-##### before you can merge, you need .ini files which can be made like this
+##### before you can merge, you need .ini files which can be made like this, but will depend on your sample names.. Be careful here to make sure you create the "x_18S-samples.txt" name right so it will work properly with your array command. 
 
     iu-gen-configs 00_DEMULTIPLEXING_REPORT
-    ls *.ini | sed 's/\.ini//g' > x_samples.txt
+    ls *.ini | sed 's/\.ini//g' | grep 18S> x_18S-samples.txt
     
 ##### now you can merge the sequnces for each sample
 
@@ -41,7 +41,7 @@ This git contains the code and steps to process the v4 region of the 18S rRNA ge
     #SBATCH --tasks-per-node=20
     #SBATCH --time=00:30:00
     #SBATCH --mem=80Gb
-    #SBATCH --array=1-30
+    #SBATCH --array=1-15
 
     SAMPLE=$(sed -n "$SLURM_ARRAY_TASK_ID"p x_18S-samples.txt)
     iu-merge-pairs ${SAMPLE}.ini
@@ -60,11 +60,41 @@ This git contains the code and steps to process the v4 region of the 18S rRNA ge
     #SBATCH --tasks-per-node=20
     #SBATCH --time=00:05:00
     #SBATCH --mem=80Gb
-    #SBATCH --array=1-30
+    #SBATCH --array=1-15
 
     SAMPLE=$(sed -n "$SLURM_ARRAY_TASK_ID"p x_18S-samples.txt)
     prinseq-lite.pl -fastq ${SAMPLE}-R1.fastq -trim_to_len 240 -out_good ${SAMPLE}-R1-prinseq
     prinseq-lite.pl -fastq ${SAMPLE}-R2.fastq -trim_to_len 240 -out_good ${SAMPLE}-R2-prinseq
+    
+##### Then you can run the merging script on the trimmed sequences. But first you will need to create the *.ini files for this. You can do this by editing your 00_DEMULTIPLEXING_REPORT and then generating the *ini files. you will just have to be careful that you activate the proper conda environments when running these commands. 
 
+    sed 's/R1/R1-prinseq/g' 00_DEMULTIPLEXING_REPORT | sed 's/R2/R2-prinseq/g' > 00_DEMULTIPLEXING_REPORT-prinseq
+    
+###### Don't forget to add these lines of text to your 00_DEMULTIPLEXING_REPORT-prinseq
 
+    sample	num_indexes_found	num_reads_stored	r1	r2
+
+####### The 00_DEMULTIPLEXING_REPORT-prinseq should look something like this
+
+    sample	num_indexes_found	num_reads_stored	r1	r2
+    B3D2T1_18S-prinseq  91686	91686	B3D2T1_18S-R1-prinseq.fastq	    B3D2T1_18S-R2-prinseq.fastq
+    B1D5T2A_18S-prinseq 86714	86714	B1D5T2A_18S-R1-prinseq.fastq	B1D5T2A_18S-R2-prinseq.fastq
+    B3D5T2C_18S-prinseq	80791	80791	B3D5T2C_18S-R1-prinseq.fastq	B3D5T2C_18S-R2-prinseq.fastq
+    B1D5T1A_18S-prinseq	59856	59856	B1D5T1A_18S-R1-prinseq.fastq	B1D5T1A_18S-R2-prinseq.fastq
+    B1D4T1A_18S-prinseq	56279   56279	B1D4T1A_18S-R1-prinseq.fastq	B1D4T1A_18S-R2-prinseq.fastq
+    
+##### Now you can generate the *ini files and run the merging. 
+    
+    iu-gen-configs 00_DEMULTIPLEXING_REPORT-prinseq
+    
+    #!/bin/bash
+    #SBATCH --nodes=1
+    #SBATCH --tasks-per-node=20
+    #SBATCH --time=00:30:00
+    #SBATCH --mem=80Gb
+    #SBATCH --array=1-15
+
+    SAMPLE=$(sed -n "$SLURM_ARRAY_TASK_ID"p x_samples.txt)
+    iu-merge-pairs ${SAMPLE}-prinseq.ini
+    
     
