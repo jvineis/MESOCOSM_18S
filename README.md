@@ -43,9 +43,28 @@ This git contains the code and steps to process the v4 region of the 18S rRNA ge
     #SBATCH --mem=80Gb
     #SBATCH --array=1-30
 
-    SAMPLE=$(sed -n "$SLURM_ARRAY_TASK_ID"p x_samples.txt)
+    SAMPLE=$(sed -n "$SLURM_ARRAY_TASK_ID"p x_18S-samples.txt)
     iu-merge-pairs ${SAMPLE}.ini
 
+#### IF YOU CHOOSE TO TRIM SEQUENCES PRIOR TO MERGING:
+
+##### First run prinseq on your set of samples in order to trim both read1 and read2 to the desired length. The standard prinseq command to do this looks like this
+
+    prinseq-lite.pl -fastq B1D2T1_18S-R1.fastq -trim_to_len 240 -out_good B1D2T1_18S-R1-prinseq
+    prinseq-lite.pl -fastq B1D2T1_18S-R2.fastq -trim_to_len 240 -out_good B1D2T1_18S-R2-prinseq
+    
+##### however, you will want to run it in a loop using the array of the SLURM scheduler which will look like this.
+    
+    #!/bin/bash
+    #SBATCH --nodes=1
+    #SBATCH --tasks-per-node=20
+    #SBATCH --time=00:05:00
+    #SBATCH --mem=80Gb
+    #SBATCH --array=1-30
+
+    SAMPLE=$(sed -n "$SLURM_ARRAY_TASK_ID"p x_18S-samples.txt)
+    prinseq-lite.pl -fastq ${SAMPLE}-R1.fastq -trim_to_len 240 -out_good ${SAMPLE}-R1-prinseq
+    prinseq-lite.pl -fastq ${SAMPLE}-R2.fastq -trim_to_len 240 -out_good ${SAMPLE}-R2-prinseq
 
 
     
