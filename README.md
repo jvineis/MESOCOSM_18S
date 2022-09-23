@@ -97,4 +97,68 @@ This git contains the code and steps to process the v4 region of the 18S rRNA ge
     SAMPLE=$(sed -n "$SLURM_ARRAY_TASK_ID"p x_samples.txt)
     iu-merge-pairs ${SAMPLE}-prinseq.ini
     
+#### Next we filter reads that don't have the primers. Here is the slurm for that
+
+#!/bin/bash
+
+#SBATCH --nodes=1
+#SBATCH --tasks-per-node=20
+#SBATCH --time=00:30:00
+#SBATCH --mem=80Gb
+#SBATCH --array=1-30
+
+SAMPLE=$(sed -n "$SLURM_ARRAY_TASK_ID"p x_merged-samples.txt)
+python ~/scripts/filter-for-18S-primer.py --i ${SAMPLE} --o ${SAMPLE}-primer-filtered.fa
+    
+#### Now you will want to run SWARM using the quality and primer filtered sequences. I use this general script below to run swarm, but I comment out the parts of the slurm and activate different parts of the command one at a time using the "#" character. 
+
+    #!/bin/bash
+    #
+    #SBATCH --nodes=1
+    #SBATCH --tasks-per-node=1
+    #SBATCH --mem=200Gb
+    #SBATCH --time=04:00:00
+
+    ### These steps replicate the work here
+    ### https://github.com/frederic-mahe/swarm/wiki/Fred's-metabarcoding-pipeline#global-dereplication-clustering-and-chimera-detection
+    ### The cat and vsearch steps should be run with the conda vsearch envionment
+    ### The sarm should be run with this environment "conda activate /home/jv2474/.conda/envs/swarm-v3.1"
+    ### The python script should be run with the bioconda environment.
+
+    ## 1. Concatenate the merged and filtered sequences
+    cat *-primer-derep.fa > pooled-samples.fa
+    ## 2. Dereplicaete the concatenated sequences
+    vsearch --derep_fulllength pooled-samples.fa --fasta_width 0 --sizeout --sizein --output pooled-samples-derep.fa
+    ## 3. Cluster the sequences
+    swarm -d 1 -f -t 40 -z pooled-samples-derep.fa -i pooled-samples-derep-struct.txt -s pooled-samples-derep-stats.txt -w pooled-samples-node-representatives.fa -o pooled-samples-node-table.txt
+    ## 4. Sort the clustered node representatives
+    vsearch --fasta_width 0 --sortbysize pooled-samples-node-representatives.fa --output pooled-samples-node-representatives-sorted.fa
+
+
+### The database for the PR2 taxonomy that you will want to use for the taxonomic assignment of your SWARM ASVs can be found here
+https://github.com/pr2database/pr2database/releases.  You will need to have the fasta "pr2_version_4.14.0_SSU_mothur.fasta" and the tax id file "SILVA_138.1_SSURef_NR99_tax_silva-fixed.tax" found in this git for the taxonomic assignment. Below is the general slurm script to run the taxonomy. You will need to make sure that vsearch is active.
+
+    #!/bin/bash
+
+    #SBATCH --nodes=1
+    #SBATCH --tasks-per-node=1
+    #SBATCH --time=00:30:00
+    #SBATCH --mem=80Gb
+
+    vsearch --usearch_global pooled-samples-node-representatives-sorted.fa --db /scratch/gpfs/WARD/JOE/DBs/pr2_version_4.14.0_SSU_mothur.fasta --blast6out NODE-HITS-PR2.txt --id 0.4
+ 
+ #### Now you will want to create a file that contains meaningful taxonomy for your taxonomic hits contained in the "NODE-HITS.txt" file. Here is the command that will get you there. This script will produce two files.. 1. contains the metadata includin the ASV and the taxonomic string and the other is the matrix of counts for each sample
+ 
+    #!/bin/bash
+
+    #SBATCH --nodes=1
+    #SBATCH --tasks-per-node=1
+    #SBATCH --time=00:30:00
+    #SBATCH --mem=80Gb
+ 
+    python ~/scripts/convert-node-hits-to-tax-node-table.py -n NODE-HITS-PR2.txt -o x_SWARMS-and-tax-for-anvio-pr2 -r /scratch/gpfs/WARD/JOE/DBs/pr2_version_4.14.0_SSU_mothur.tax -s x_SWARM-contingency-table.txt -min 50
+ 
+ 
+ 
+    
     
