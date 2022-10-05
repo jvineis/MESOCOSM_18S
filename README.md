@@ -96,6 +96,39 @@ This git contains the code and steps to process the v4 region of the 18S rRNA ge
 
     SAMPLE=$(sed -n "$SLURM_ARRAY_TASK_ID"p x_samples.txt)
     iu-merge-pairs ${SAMPLE}-prinseq.ini
+
+### If you want to look into the failed reads at all. For example, understand if the merging step created a bias against a certain taxonomic group. You might try the following. Were were intersted in the question: Do the failed reads belong to a single taxonomy that may have a longer 18S v4 region and therefore be biased against in the merging analysis because the paired ends don’t overlap? Here are the steps to understand the taxonomy of the reads that failed to merge:
+
+#### merged the reads using “iu-merge-pairs”. This results in a file ending in “FAILED”. For example, I have the results of many merged samples in this directory “/scratch/gpfs/WARD/JOE/MOSS_BLOOM/18S_20220502_Data/DEMULTIPLEX” (e.g. B2D5T1A_18S_FAILED). 
+
+#### If I want the fastq ids for all the reads that failed to merge, I need to grab them from these “FAILED” files. This is really easy. Here are the steps to collect the ids of the failed reads. The commands may need to be slightly modified in order to match the names of the fastq files and the name of your “FAILED” reads.
+
+    grep ">" *18S_FAILED | cut -f 2 -d "|" > x_ALL-failed-ids.txt
+    python mu-selectseq_from_fastq.py --R1 Read1.fastq –R2 Read2.fastq –outfile1 failed-readsR1.fasta –outfile2 failed-readsR2.fasta –infile x_ALL-failed-ids.txt
+
+#### Then run vsearch on both the failed-readsR1.fasta and failed-readsR2.fasta and select the higher level taxonomy from your output.
+
+    vsearch --usearch_global x_reads-that-failed-merge-R1.fa –db /scratch/gpfs/WARD/JOE/DBs/pr2_version_4.14.0_SSU_mothur.fasta --blast6out NODE-HITS-PR2.txt --id 0.4
+    cut -f 2 NODE-HITS-PR2.txt | sort | uniq > temp
+    grep -w -f temp /scratch/gpfs/WARD/JOE/DBs/pr2_version_4.14.0_SSU_mothur.tax | cut -f 4 -d ";" | sort | uniq -c > tax_temp4
+    grep -w -f temp /scratch/gpfs/WARD/JOE/DBs/pr2_version_4.14.0_SSU_mothur.tax | cut -f 3 -d ";" | sort | uniq -c > tax_temp3
+
+#### This is the top of the "tax_temp4" file produced above. There are a ton of different taxonomic groups in my list, and its similar to the taxonomy in my reads that successfully merged, so I am happy that they failed, because it was likely due to a real quality issue. 
+
+      3 Acidobacteria
+     11 Actinobacteria
+    238 Apicomplexa
+     12 Apusomonadidae
+     35 Bacteroidetes
+      1 Breviatea
+     19 Centroheliozoa
+    672 Cercozoa
+      8 Cercozoa:plas
+      1 Chlamydiae
+
+
+
+
     
 #### Next we filter reads that don't have the primers. Here is the slurm for that
 
