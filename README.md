@@ -190,6 +190,26 @@ https://github.com/pr2database/pr2database/releases.  You will need to have the 
     #SBATCH --mem=80Gb
  
     python ~/scripts/convert-node-hits-to-tax-node-table.py -n NODE-HITS-PR2.txt -o x_SWARMS-and-tax-for-anvio-pr2 -r /scratch/gpfs/WARD/JOE/DBs/pr2_version_4.14.0_SSU_mothur.tax -s x_SWARM-contingency-table.txt -min 50
+    
+
+## Lets Run Mimimum Entropy Decomposition. This is akin to running oligotyping on all of the of the data with a specific entropy for all steps of the analysis. 
+
+#### Here is sbatch file with steps to run MED
+    
+    #!/bin/bash
+
+    #SBATCH --nodes=1
+    #SBATCH --tasks-per-node=1
+    #SBATCH --time=02:00:00
+    #SBATCH --mem=80Gb
+
+    cat *18S_MERGED x_ALL-MERGED-for-MED.fa
+    o-pad-with-gaps x_ALL-MERGED-for-MED.fa -o x_ALL-MERGED-for-MED-padded.fa
+    decompose x_ALL-MERGED-for-MED-padded.fa -o x_MED-output
+
+
+
+
  
  
  
