@@ -31,7 +31,7 @@ This git contains the code and steps to process the v4 region of the 18S rRNA ge
 
 ##### before you can merge, you need .ini files which can be made like this, but will depend on your sample names.. Be careful here to make sure you create the "x_18S-samples.txt" name right so it will work properly with your array command. 
 
-    iu-gen-configs 00_DEMULTIPLEXING_REPORT
+    iu-gen-configs 00_DEMULTIPLEXING_18S --r1-prefix ^GTG[C,T]CAGC[A,C]GCCGCGGTAA --r2-prefix ^TTGG[C,T][A,G]AATGCTTTCGC
     ls *.ini | sed 's/\.ini//g' | grep 18S> x_18S-samples.txt
     
 ##### now you can merge the sequnces for each sample
