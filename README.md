@@ -130,7 +130,7 @@ This git contains the code and steps to process the v4 region of the 18S rRNA ge
 
 
     
-#### Next we filter reads that don't have the primers. Here is the slurm for that
+#### Next we filter reads that don't have the primers. Here is the slurm for that ### THIS IS NOW INCLUDED IN THE MERGE STEP WHICH TRIMS OFF THE PRIMERS - we want to trim off the primers because there is some potential for non-specific annealing of the degenerate primers that is prolifereated in the amplicon data. This potentially allows for false variants in the primer region of the sequences that SWARM and oligotyping think are real and leads to spurious ASVs. 
 
 #!/bin/bash
 
@@ -144,6 +144,8 @@ SAMPLE=$(sed -n "$SLURM_ARRAY_TASK_ID"p x_merged-samples.txt)
 python ~/scripts/filter-for-18S-primer.py --i ${SAMPLE} --o ${SAMPLE}-primer-filtered.fa
     
 #### Now you will want to run SWARM using the quality and primer filtered sequences. I use this general script below to run swarm, but I comment out the parts of the slurm and activate different parts of the command one at a time using the "#" character. 
+
+#### THE SWARM CLUSTERING WITH PRIMERS - SHOULD NOT USE
 
     #!/bin/bash
     #
@@ -167,6 +169,29 @@ python ~/scripts/filter-for-18S-primer.py --i ${SAMPLE} --o ${SAMPLE}-primer-fil
     ## 4. Sort the clustered node representatives
     vsearch --fasta_width 0 --sortbysize pooled-samples-node-representatives.fa --output pooled-samples-node-representatives-sorted.fa
 
+#### THE SWARM CLUSTERING WITH PRIMERS TRIMMED FROM AMPLICONS - change the time and memory depending on which step you are at. SWARM will likely take the longest, but likely not more than 1hr.
+
+    #!/bin/bash
+    #
+    #SBATCH --nodes=1
+    #SBATCH --tasks-per-node=1
+    #SBATCH --mem=1Gb
+    #SBATCH --time=00:20:00
+
+    ### These steps replicate the work here
+    ### https://github.com/frederic-mahe/swarm/wiki/Fred's-metabarcoding-pipeline#global-dereplication-clustering-and-chimera-detection
+    ### The cat and vsearch steps should be run with the conda vsearch envionment
+    ### The sarm should be run with this environment "conda activate /home/jv2474/.conda/envs/swarm-v3.1"
+    ### The python script should be run with the bioconda environment.
+
+    ## 1. Concatenate the merged and filtered sequences
+    cat *MERGED > pooled-samples.fa
+    ## 2. Dereplicaete the concatenated sequences
+    vsearch --derep_fulllength pooled-samples.fa --fasta_width 0 --sizeout --sizein --output pooled-samples-derep.fa
+    ## 3. Cluster the sequences
+    swarm -d 1 -f -t 40 -z pooled-samples-derep.fa -i pooled-samples-derep-struct.txt -s pooled-samples-derep-stats.txt -w pooled-samples-node-representatives.fa -o pooled-samples-node-table.txt
+    ## 4. Sort the clustered node representatives
+    vsearch --fasta_width 0 --sortbysize pooled-samples-node-representatives.fa --output pooled-samples-node-representatives-sorted.fa
 
 ### The database for the PR2 taxonomy that you will want to use for the taxonomic assignment of your SWARM ASVs can be found here
 https://github.com/pr2database/pr2database/releases.  You will need to have the fasta "pr2_version_4.14.0_SSU_mothur.fasta" and the tax id file "SILVA_138.1_SSURef_NR99_tax_silva-fixed.tax" found in this git for the taxonomic assignment. Below is the general slurm script to run the taxonomy. You will need to make sure that vsearch is active.
