@@ -45,7 +45,9 @@ This git contains the code and steps to process the v4 region of the 18S rRNA ge
 
     SAMPLE=$(sed -n "$SLURM_ARRAY_TASK_ID"p x_18S-samples.txt)
     iu-merge-pairs ${SAMPLE}.ini
-
+    vsearch --quiet --derep_fulllength ${SAMPLE}_MERGED --sizeout --fasta_width 0 --relabel_sha1 --output ${SAMPLE}-primer-derep.fa
+    
+    
 #### IF YOU CHOOSE TO TRIM SEQUENCES PRIOR TO MERGING:
 
 ##### First run prinseq on your set of samples in order to trim both read1 and read2 to the desired length. The standard prinseq command to do this looks like this
@@ -83,19 +85,20 @@ This git contains the code and steps to process the v4 region of the 18S rRNA ge
     B1D5T1A_18S-prinseq	59856	59856	B1D5T1A_18S-R1-prinseq.fastq	B1D5T1A_18S-R2-prinseq.fastq
     B1D4T1A_18S-prinseq	56279   56279	B1D4T1A_18S-R1-prinseq.fastq	B1D4T1A_18S-R2-prinseq.fastq
     
-##### Now you can generate the ini files and run the merging. 
+##### Now you can generate the ini files and run the merging and the dereplication of reads for each sample. You will need to activate the proper environment for each step. 
     
     iu-gen-configs 00_DEMULTIPLEXING_REPORT-prinseq
     
     #!/bin/bash
     #SBATCH --nodes=1
-    #SBATCH --tasks-per-node=20
+    #SBATCH --tasks-per-node=1
     #SBATCH --time=00:30:00
-    #SBATCH --mem=80Gb
+    #SBATCH --mem=2Gb
     #SBATCH --array=1-15
 
     SAMPLE=$(sed -n "$SLURM_ARRAY_TASK_ID"p x_samples.txt)
-    iu-merge-pairs ${SAMPLE}-prinseq.ini
+    iu-merge-pairs ${SAMPLE}-prinseq.ini 
+    vsearch --quiet --derep_fulllength ${SAMPLE}_MERGED --sizeout --fasta_width 0 --relabel_sha1 --output ${SAMPLE}-primer-derep.fa
 
 ### If you want to look into the failed reads at all. For example, understand if the merging step created a bias against a certain taxonomic group. You might try the following. Were were intersted in the question: Do the failed reads belong to a single taxonomy that may have a longer 18S v4 region and therefore be biased against in the merging analysis because the paired ends don’t overlap? Here are the steps to understand the taxonomy of the reads that failed to merge:
 
@@ -138,7 +141,7 @@ This git contains the code and steps to process the v4 region of the 18S rRNA ge
 #SBATCH --tasks-per-node=20
 #SBATCH --time=00:30:00
 #SBATCH --mem=80Gb
-#SBATCH --array=1-30
+#SBATCH --array=1-15
 
 SAMPLE=$(sed -n "$SLURM_ARRAY_TASK_ID"p x_merged-samples.txt)
 python ~/scripts/filter-for-18S-primer.py --i ${SAMPLE} --o ${SAMPLE}-primer-filtered.fa
