@@ -197,18 +197,18 @@ python ~/scripts/filter-for-18S-primer.py --i ${SAMPLE} --o ${SAMPLE}-primer-fil
     vsearch --fasta_width 0 --sortbysize pooled-samples-node-representatives.fa --output pooled-samples-node-representatives-sorted.fa
 
 ### The database for the PR2 taxonomy that you will want to use for the taxonomic assignment of your SWARM ASVs can be found here
-https://github.com/pr2database/pr2database/releases.  You will need to have the fasta "pr2_version_4.14.0_SSU_mothur.fasta" and the tax id file "SILVA_138.1_SSURef_NR99_tax_silva-fixed.tax" found in this git for the taxonomic assignment. Below is the general slurm script to run the taxonomy. You will need to make sure that vsearch is active.
+https://github.com/pr2database/pr2database/releases.  You will need to have the fasta "pr2_version_4.14.0_SSU_mothur.fasta" and the tax id file "SILVA_138.1_SSURef_NR99_tax_silva-fixed.tax" found in this git for the taxonomic assignment. Below is the general slurm script to run the taxonomy. You will need to make sure that vsearch is active. 
 
     #!/bin/bash
 
     #SBATCH --nodes=1
     #SBATCH --tasks-per-node=1
     #SBATCH --time=00:30:00
-    #SBATCH --mem=80Gb
+    #SBATCH --mem=8Gb
 
     vsearch --usearch_global pooled-samples-node-representatives-sorted.fa --db /scratch/gpfs/WARD/JOE/DBs/pr2_version_4.14.0_SSU_mothur.fasta --blast6out NODE-HITS-PR2.txt --id 0.4
- 
- #### Now you will want to create a file that contains meaningful taxonomy for your taxonomic hits contained in the "NODE-HITS.txt" file. Here is the command that will get you there. This script will produce two files.. 1. contains the metadata includin the ASV and the taxonomic string and the other is the matrix of counts for each sample
+    
+ #### The vsearch command above provides taxonomy ids, but not taxonomy strings for each of the unique swarm IDs in your file. The script below will create a new file that contains the swarm ID and the taxonoimic string.. because the string is what we are really after. Position one in the script is the output from the command above, position 2 is the location of the tax file you downloaded for PR2 and position 3 is the name of the output file name of your choosing.. I would keep it consistent with what I have named it in order to simplify life downstream. 
  
     #!/bin/bash
 
@@ -216,9 +216,24 @@ https://github.com/pr2database/pr2database/releases.  You will need to have the 
     #SBATCH --tasks-per-node=1
     #SBATCH --time=00:30:00
     #SBATCH --mem=80Gb
- 
-    python ~/scripts/convert-node-hits-to-tax-node-table.py -n NODE-HITS-PR2.txt -o x_SWARMS-and-tax-for-anvio-pr2 -r /scratch/gpfs/WARD/JOE/DBs/pr2_version_4.14.0_SSU_mothur.tax -s x_SWARM-contingency-table.txt -min 50
+    python combine-node-hits-with-tax-strings.py NODE-HITS-PR2.txt /scratch/gpfs/WARD/JOE/DBs/pr2_version_4.14.0_SSU_mothur.tax NODE-HITS-PR2-tax_strings.txt
     
+### Look for chimeric sequences in in the pooled-samples-node-representatives-sorted.fa file using vsearch
+
+ #!/bin/bash
+
+    #SBATCH --nodes=1
+    #SBATCH --tasks-per-node=1
+    #SBATCH --time=00:30:00
+    #SBATCH --mem=8Gb
+    
+    vsearch --uchime_denovo pooled-samples-node-representatives-sorted.fa --uchimeout pooled-samples-node-representatives-sorted.uchime
+    
+### Now we have a lot of files. Including, the stats, structure, swarms, and representative sequences produced by SWARM, taxonomic hits, and chimera tables produced by VSEARCH. We want to combine this information into a single table to enable visualization and understanding of the community according to our 18S sequences. There is a single script to do this, but it won't work unless you have done everything above exactly the same as I have. This is where keeping the file names the same will be really helpful. 
+
+
+
+
 
 ## Lets Run Mimimum Entropy Decomposition. This is akin to running oligotyping on all of the of the data with a specific entropy for all steps of the analysis. 
 
