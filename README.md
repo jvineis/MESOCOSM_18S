@@ -232,7 +232,7 @@ https://github.com/pr2database/pr2database/releases.  You will need to have the 
 ### Now we have a lot of files. Including, the stats, structure, swarms, and representative sequences produced by SWARM, taxonomic hits, and chimera tables produced by VSEARCH. We want to combine this information into a single table to enable visualization and understanding of the community according to our 18S sequences. There is a single script to do this, but it won't work unless you have done everything above exactly the same as I have. This is where keeping the file names the same will be really helpful. 
 
 
-
+    python ~/scripts/mu-swarms-to-ASVs-table-18Sv4.py -s pooled-samples-node-table.txt -o x_SWARM-contingency-table.txt -l x_fasta-names-for-swarm-otu-table-construction.txt -n pooled-samples-node-representatives.fa -t NODE-HITS-PR2-tax_strings.txt -c pooled-samples-node-representatives-sorted.uchime -st pooled-samples-derep-stats.txt
 
 
 ## Lets Run Mimimum Entropy Decomposition. This is akin to running oligotyping on all of the of the data with a specific entropy for all steps of the analysis. 
