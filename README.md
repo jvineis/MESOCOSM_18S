@@ -111,3 +111,24 @@ https://github.com/pr2database/pr2database/releases.  You will need to have the 
 
 
     python ~/scripts/mu-swarms-to-ASVs-table-18Sv4.py -s pooled-samples-node-table.txt -o x_SWARM-contingency-table.txt -l x_fasta-names-for-swarm-otu-table-construction.txt -n pooled-samples-node-representatives.fa -t NODE-HITS-PR2-tax_strings.txt -c pooled-samples-node-representatives-sorted.uchime -st pooled-samples-derep-stats.txt
+    
+#### You need to transpose the matrix for flashweave analysis below. To do this, run the script "x_transpose-and-filter-counts.R" through the "x_transpose-and-filter-counts.shx" sbatch script followed by the "x_filter-flashweave-input-table.R" using the same sbatch script. Its important to also remove the sample names from the resulting ".csv file. I have been doing this step manually. 
+
+
+### Now we can look at a network of the v4 sequences..I think that we shoud include all of the ASVs for this.. even the low abundance SWARMS. The x_SWARM-contingency-table.txt produced above will be most helpful to making this happen. 
+### Run the flashweave analysis (I edited this section on 01042023). First create the julia script to run Flashweave. It should look like this. and the input file "x_SWARM-contingency-table.txt-swarm-matrix-for-flashweave.csv" was produced by the script above. 
+
+    #!/usr/bin/env julia
+                    
+    using FlashWeave
+    println("Hello climber, I'm running Flashweave for you")
+                                                                                    
+    v4_count_data = "x_SWARM-contingency-table.txt-swarm-matrix-for-flashweave.csv"
+    v4_network_count = learn_network(v4_count_data,max_k=2, n_obs_min=3)
+    save_network("x_SWARM-counts-for-flashweave-with-MAGs-output-test.edgelist", v4_network_count)                                            
+    save_network("x_SWARM-counts-for-flashweave-with-MAGs-output-test.gml", v4_network_count)
+
+### The output matrix can be merged with taxonomy etc. so that the interacting pairs contain the taxonomic identity and details that you would like in order to understand who is interacting. I copy the "x_SWARM-counts-for-flashweave-with-MAGs-output-test.edgelist" to "x_SWARM-counts-for-flashweave-with-MAGs-output.edgelist" then remove the first two lines from the "x_SWARM-counts-for-flashweave-with-MAGs-output-test.edgelist" file. Then I run the "select-associations-from-flashweave.py" script on the head node.
+    
+
+    
