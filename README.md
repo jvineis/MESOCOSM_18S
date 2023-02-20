@@ -128,7 +128,13 @@ https://github.com/pr2database/pr2database/releases.  You will need to have the 
     save_network("x_SWARM-counts-for-flashweave-with-MAGs-output-test.edgelist", v4_network_count)                                            
     save_network("x_SWARM-counts-for-flashweave-with-MAGs-output-test.gml", v4_network_count)
 
-### The output matrix can be merged with taxonomy etc. so that the interacting pairs contain the taxonomic identity and details that you would like in order to understand who is interacting. I copy the "x_SWARM-counts-for-flashweave-with-MAGs-output-test.edgelist" to "x_SWARM-counts-for-flashweave-with-MAGs-output.edgelist" then remove the first two lines from the "x_SWARM-counts-for-flashweave-with-MAGs-output-test.edgelist" file. Then I run the "select-associations-from-flashweave.py" script on the head node.
+### The output matrix can be merged with taxonomy etc. so that the interacting pairs contain the taxonomic identity and details that you would like in order to understand who is interacting. I copy the "x_SWARM-counts-for-flashweave-with-MAGs-output-test.edgelist" to "x_SWARM-counts-for-flashweave-with-MAGs-output.edgelist" then remove the first two lines from the "x_SWARM-counts-for-flashweave-with-MAGs-output-test.edgelist" file. Then I run the "select-associations-from-flashweave.py" script on the head node because it is a very small job. Here ia an example of how to run it.
+
+    python ~/scripts/select-associations-from-flashweave.py x_SWARM-counts-for-includes-chimera-flashweave-output_test-23.edgelist x_SWARM-contingency-table-includes-chimera-swarm-matrix-for-anvio.txt x_SWARM-counts-for-includes-chimera-flashweave-output_test-23-edgelist-with-taxa.txt
+    
+    
+    
+ 
     
 
     
