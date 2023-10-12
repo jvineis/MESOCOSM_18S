@@ -1,0 +1,648 @@
+Asterolampra_spp.	6130.0
+Asterolampra_sp.	6130.0
+Nitzschia_frigida 	98.0
+Nitzschia_pungens	114.0
+Coscinodiscus_antarcticus	71366.0
+Grammatophora_spp.	819.0
+Chaetoceros_constrictus	454.0
+Chaetoceros_eibenii	825.0
+Chaetoceros_radicans	89.0
+Guinardia_striata	5286.5
+Asterionella_mediterranea	167.0
+Cerataulina_pelagica	2253.1666666666665
+Dactyliosolen_spp.	9039.0
+Asteromphalus_spp.	10434.0
+Triceratium_formosum	28539.0
+Chaetoceros_pendulus	162.0
+Membraneis_imposter	2315.3333333333335
+Cyclotella_caspia	128.0
+Thalassiosira_leptopus	5256.0
+Grammatophora_arctica	122.0
+Pleurosira_laevis	14189.0
+Eucampia_antarctica	1231.0
+Thalassionema_spp.	93.0
+Thalassiosira_sp.	5146.12
+Corethron_hystrix	3955.0
+Melosira_varians	187.0
+Rhizosolenia_simplex	7577.0
+Bacteriastrum_cf. comosum	412.0
+Thalassiosira_cf. angulata	536.3333333333334
+Rhabdonema_adriaticum	227.0
+Striatella_delicatula 	40.0
+Chaetoceros_dichaeta	440.75
+Ditylum_brightwellii	13176.0
+Neostreptotheca_subindica	11656.0
+Rhizosolenia_cf. imbricata	27898.0
+Plagiotropis_lepidoptera	1114.0
+Coscinodiscus_granulosus	541.0
+Thalassiosira_delicatula	270.0
+Chaetoceros_nipponicus	421.0
+Melosira_moniliformis	1748.0
+Actinoptychus_splendens	4171.0
+Pleurosigma_angulatum	844.0
+Plagiogramma_staurophorum	80.0
+Hemiaulus_sp.	2885.0
+Nitzschia_closterium	228.0
+Thalassiosira_tcherniai	924.0
+Delphineis_sp.	231.0
+Centric_spp.	56589.529411764706
+Leptocylindrus_minimus	44.0
+Dimeregramma_sp.	129.0
+Thalassiosira_minima	70.0
+Hemiaulus_spp.	2885.0
+Nitzschia_pseudonana	19.0
+Chaetoceros_dadayi	154.0
+Melosira_arctica 	1096.0
+Planktoniella_sp. 	2451.0
+Pennate_spp.	2897.9523809523807
+Cymatosira_spp.	16.0
+Melosira_sp.	1600.0
+Chaetoceros_filiformis	20.0
+Grammatophora_sp.	819.0
+Amphora_costata	1121.0
+Thalassiosira_gerloffii	1034.0
+Pseudo-nitzschia_fraudulenta	115.0
+Dimeregramma_minor	129.0
+Pleurosigma_acutum	1669.0
+Thalassiosira_oestrupii var. venrickae	478.0
+Coscinodiscus_janischii	43842.0
+Rhizosolenia_antennata f. semispina	3798.0
+Chaetoceros_diadema	625.0
+Pinnularia_sp.	2918.0
+Thalassiosira_antarctica	344.0
+Nitzschia_cf. sigmoidea	1380.0
+Chaetoceros_ingolfianus	260.0
+Fragilaria_sublinearis f. lata	139.0
+Porosira_pseudodenticulata	8837.0
+Thalassiosira_levanderi var. oestrupii	54.0
+Asteroplanus_karianus	176.0
+Asteromphalus_flabellatus	1022.0
+Fragilariopsis_obliquecostata	258.4
+Azpeitia_africana	2586.0
+Navicula_vanhoeffenii 	121.0
+Thalassiosira_nordenskioeldii	1029.0
+Navicula_transitans	443.0
+Meridion_circulare	37.0
+Fragilariopsis_spp.	198.0
+Grammatophora_marina	203.0
+Thalassiosira_oliveriana	1222.0
+Chaetoceros_atlanticus	463.0
+Cocconeis_pinnata	235.0
+Podocystis_adriatica	4786.0
+Asteromphalus_sarcophagus	530.0
+Chaetoceros_anastomosans var. externa	115.0
+Chaetoceros_cf. radicans	89.0
+Thalassiosira_hyalina 	319.0
+Pleurosigma_nicobaricum	1454.0
+Thalassiosira_anguste-lineata	2043.375
+Bacillaria_paxillifera 	413.0
+Chaetoceros_socialis	56.0
+Chaetoceros_lorenzianus	3282.0
+Lioloma_pacificum	846.0
+Pinnularia_lata	2047.0
+Chaetoceros_sp.	3047.3529411764707
+Fragilariopsis_doliolus	143.0
+Lauderia_sp.	4316.0
+Pseudo-nitzschia_cf. delicatissima	15.0
+Gyrosigma_fasciola	348.0
+Actinoptychus_undulatus 	2348.0
+Toxarium_undulatum 	271.0
+Coscinodiscus_apiculiferus	50947.0
+Thalassiosira_gravida	924.0
+Bacteriastrum_varians	422.0
+Pseudo-nitzschia_multistriata	106.0
+Pseudosolenia_calcar-avis	53886.4
+Guinardia_striata 	4778.888888888889
+Thalassiosira_spp.	4919.615384615385
+Pleurosigma_stuxbergii 	1833.0
+Chaetoceros_anastomosans	118.0
+Guinardia_cylindrus	7947.0
+Haslea_trompii	997.0
+Synedra_gaillonii	594.0
+Proboscia_indica	8884.5
+Lauderia_spp.	4316.0
+Tropidoneis_spp.	2387.0
+Diploneis_crabro	1226.0
+Detonula_pumila	2381.0
+Chaetoceros_cf. peruvianus	404.0
+Chaetoceros_spp.	2707.9166666666665
+Pseudo-nitzschia_americana	23.0
+Pleurosigma_atlanticus 	741.0
+Ditylum_cf. brightwellii	13176.0
+Nitzschia_cf. closterium	311.0
+Coscinodiscus_concinnus	268833.0
+Pseudo-nitzschia_delicatissima	14.333333333333334
+Rhabdonema_sp. 	493.0
+Pseudo-nitzschia_cf. subpacifica 	85.0
+Chaetoceros_pseudocrinitus	577.0
+Dactyliosolen_phuketensis	5106.0
+Navicula_granii 	723.0
+Climacosphenia_spp.	306.0
+Detonula_spp.	1260.0
+Pseudo-nitzschia_cf. seriata	176.0
+Cymatosira_belgica	16.0
+Caloneis_ventricosa	2670.0
+Pseudo-nitzschia_antarctica	59.0
+Nitzschia_cf. pacifica	35.0
+Lioloma_delicatulum	884.3333333333334
+Pleurosigma_simonsenii	14742.0
+Pseudo-nitzschia_subcurvata	24.0
+Chaetoceros_danicus	270.0
+Chaetoceros_coarctatus	1885.0
+Dactyliosolen_antarcticus	10147.142857142857
+Haslea_wawrikae	569.5
+Navicula_septentrionalis	185.0
+Chaetoceros_vanheurckii 	707.0
+Palmeria_spp.	87497.0
+Thalassionema_cf. pseudonitzschioides 	63.0
+Leptocylindrus_adriaticus	243.0
+Nitzschia_tenuirostris	300.0
+Navicula_sp.	1749.875
+Amphiprora_kjellmanii 	3816.0
+Diploneis_cf. sejuncta	225.0
+Thalassiosira_bulbosa 	222.0
+Biddulphia_contorta	13657.0
+Chaetoceros_karianus 	96.0
+Delphineis_surirella	376.0
+Biddulphia_striata	2305.0
+Lioloma_spp. 	1092.0
+Chaetoceros_densus	1323.0
+Nitzschia_acicularis	50.0
+Asteromphalus_brookei	320.0
+Lithodesmium_undulatum	3289.0
+Bacteriastrum_delicatulum 	422.0
+Rhizosolenia_setigera 	6206.666666666667
+Asteromphalus_parvulus	639.0
+Coscinodiscus_asteromphalus	95958.0
+Guinardia_flaccida	9327.0
+Pleurosigma_cf. strigosum	3553.0
+Rhizosolenia_clevei var. communis 	9400.0
+Coscinodiscus_curvatulus	2571.0
+Nitzschia_sigmoidea	1380.0
+Chaetoceros_breve	395.0
+Coscinodiscus_granii	30785.0
+Brockmanniella_brockmannii	110.0
+Synedra_spp.	1568.0
+Thalassionema_elegans 	115.0
+Chaetoceros_decipiens	1079.0
+Rhizosolenia_delicatula	1315.0
+Rhizosolenia_curvata	3041.0
+Nitzschia_crotonensis 	52.0
+Chaetoceros_costatus	181.0
+Rhizosolenia_hyalina	7443.0
+Nitzschia_gracilis	45.0
+Biddulphia_cf. mobiliensis	14745.0
+Nitzschia_sp.	3780.0
+Hemidiscus_spp.	12974.0
+Diatoma_tenue	48.0
+Rhizosolenia_hebetata f. hebetata	9431.0
+Navicula_cf. planamembranacea	602.0
+Cyclotella_spp.	1187.5
+Rhizosolenia_cf.striata	5765.0
+Schroederella_delicatula	1336.0
+Odontella_cf. longicruris 	2942.0
+Diatoma_vulgare	223.0
+Ditylum_sp.	13176.0
+Chaetoceros_peruvianus	404.0
+Thalassiosira_tumida	4646.75
+Amphiprora_hyperborea 	2717.0
+Corethron_cf. criophilum	1775.0
+Licmophora_abbreviata	134.0
+Climacodium_biconcavum	5694.0
+Rhizosolenia_chunii	3193.8
+Cyclotella_socialis	77.0
+Guinardia_delicatula	1524.0
+Dactyliosolen_tenuijunctus	195.0
+Fragilaria_striatula	98.0
+Porosira_spp.	16684.0
+Thalassiosira_cf. lineata	646.0
+Cyclotella_sp.	1084.0
+Chaetoceros_debilis	355.0
+Asteromphalus_hookeri	2608.5
+Odontella_longicruris	2942.0
+Pleurosigma_elongatum	2131.0
+Actinocyclus_ehrenbergii 	41676.0
+Chaetoceros_neogracilis	143.0
+Achnanthes_longipes	1401.0
+Rhizosolenia_antennata	3798.0
+Climacodium_spp.	3946.0
+Thalassiosira_punctigera	20148.0
+Bacteriastrum_mediterraneum	515.0
+Pseudo-nitzschia_pungens	106.44444444444444
+Plagiogrammopsis_vanheurckii	163.0
+Stellarima_stellaris 	5218.0
+Biddulphia_sp.	68263.0
+Chaetoceros_criophilus	1064.0
+Cylindrotheca_spp. 	300.0
+Coscinodiscus_bouvet	22195.0
+Chaetoceros_tortissimus	205.0
+Eucampia_spp.	1488.0
+Bacteriastrum_elongatum	570.0
+Nitzschia_distans	98.0
+Rhizosolenia_decipiens	700.0
+Actinocyclus_spp.	13575.0
+Nitzschia_longissima	283.15384615384613
+Bacteriastrum_cf. furcatum 	422.0
+Actinoptychus_spp.	25902.0
+Detonula_confervacea	255.0
+Neostreptotheca_torta f. triangularis 	908.0
+Lioloma_sp.	1092.0
+Auricula_sp.	427.0
+Thalassiosira_australis	1331.0
+Pseudoguinardia_recta	11587.0
+Asterionellopsis_glacialis	199.0
+Licmophora_spp.	194.0
+Fragilaria_spp.	185.0
+Helicotheca_tamensis	2330.0
+Amphora_spp.	1877.0
+Pseudo-nitzschia_prolongatoides	51.0
+Lauderia_punctata	1512.0
+Chaetoceros_atlanticus var. neopolitanus	463.0
+Diploneis_interrupta 	820.0
+Stauroneis_sp.	10018.0
+Mastogloia_rostrata	5013.0
+Proboscia_alata	1424.9375
+Cerataulina_spp.	3591.0
+Chaetoceros_bulbosum	271.0
+Rhizosolenia_cf. styliformis	57171.0
+Coscinodiscus_centralis	52528.0
+Synedra_toxoneides var. curvata	281.0
+Thalassiosira_parva	307.0
+Mastogloia_woodiana	69.0
+Pleurosigma_formosum 	4245.0
+Rhizosolenia_imbricata	7485.933333333333
+Achnanthes_taeniata	79.0
+Chaetoceros_abnormis	108.0
+Diatom_spp.	263567.0
+Pleurosigma_planctonicum	14742.0
+Rhizosolenia_temperei	811139.0
+Hemiaulus_sinensis	896.0
+Membraneis_spp.	11160.0
+Thalassiosira_partheneia	276.0
+Azpeitia_tabularis	421.0
+Bacterosira_bathyomphala	441.0
+Nitzschia_spp.	3355.5
+Chaetoceros_willei	343.0
+Chaetoceros_difficilis	104.0
+Asteromphalus_cf. hookeri	1033.0
+Melosira_islandica var. curvata	492.0
+Thalassionema_bacillare	107.0
+Licmophora_sp.	194.0
+Rhizosolenia_cf. chunii	3762.5
+Chaetoceros_circinalis	343.0
+Eucampia_zodiacus 	1362.0
+Climacodium_frauenfeldianum	2249.0
+Rhabdonema_arcuatum 	670.0
+Valdiviella_formosa	7618.0
+Chaetoceros_similis	76.0
+Chaetoceros_paulsenii	72.0
+Diploneis_sp.	2166.0
+Chaetoceros_cf. pelagicus	22.0
+Chaetoceros_cf. diadema 	625.0
+Pleurosigma_strigosum	3553.0
+Thalassiosira_eccentrica	2308.0
+Chaetoceros_subtilis	108.0
+Thalassiosira_gracilis	187.0
+Cocconeis_spp. 	505.0
+Navicula_transitans var. deresa	443.0
+Rhizosolenia_spp.	755902.0
+Asterionellopsis_sp.	195.0
+Hemiaulus_cf. hauckii	1076.0
+Porosira_glacialis 	3065.0
+Schroederella_sp.	1336.0
+Gomphonema_sp.	157.0
+Nitzschia_epiphytica	7.0
+Bacteriastrum_comosum 	412.0
+Nitzschia_pungens var. atlantica 	155.0
+Nitzschia_macilenta	335.0
+Thalassiothrix_antarctica	2456.0
+Entomoneis_sp.	1499.0
+Biddulphia_sinensis	70390.0
+Leptocylindrus_danicus	243.0
+Chaetoceros_frickei	421.0
+Bacteriastrum_furcatum	422.0
+Frustulia_sp.	579.0
+Amphiprora_sp.	2115.0
+Meuniera_membranacea	2390.0
+Triceratium_sp.	12451.0
+Thalassionema_nitzschioides	96.58333333333333
+Coscinodiscus_gigas var. praetexta	241973.0
+Diploneis_spp.	2166.0
+Rhizosolenia_cf. castracanei 	323584.0
+Shionodiscus_oestrupii 	174.0
+Pleurosigma_normanii	2058.0
+Coscinodiscus_perforatus 	41311.0
+Chaetoceros_mitra	2209.0
+Asterionella_formosa	105.0
+Proboscia_truncata 	2155.0
+Chaetoceros_affinis	343.0
+Cocconeis_scutellum	460.0
+Nitzschia_sigma	480.0
+Rhaphoneis_amphiceros	683.0
+Achnanthes_spp. 	603.0
+Craticula_halophila	174.0
+Thalassiothrix_sp.	2107.0
+Thalassionema_frauenfeldii	96.25
+Chaetoceros_hyalochaetae	1873.0
+Thalassiosira_lentiginosa	2162.5
+Cyclotella_choctawhatcheeana	10.0
+Ulnaria_acus	107.0
+Coscinodiscus_gigas	241973.0
+Grammatophora_arcuata 	158.0
+Denticulopsis_sp.	104.0
+Stephanopyxis_palmeriana	4080.0
+Thalassiothrix_mediterranea 	563.0
+Stephanopyxis_turris	4491.0
+Biddulphia_regia	26207.0
+Actinoptychus_sp.	25902.0
+Thalassiosira_angulata	567.0
+Amphora_proteus	2273.0
+Odontella_weissflogii	4722.0
+Cymatosira_lorenziana	25.0
+Diploneis_cf. coffeaeformis	3292.0
+Odontella_rhombus	23708.0
+Caloneis_sp.	1051.0
+Pseudo-nitzschia_turgidula	28.75
+Hemiaulus_hauckii	1076.0
+Hemidiscus_sp.	12974.0
+Chaetoceros_fragilis 	56.0
+Chaetoceros_subsecundus 	625.0
+Chaetoceros_cf. tenuissimus	8.0
+Odontella_sp.	22685.0
+Biddulphia_granulata	13005.0
+Actinocyclus_curvatulus	4683.0
+Navicula_pelagica 	98.0
+Haslea_spp. 	748.0
+Navicula_planamembranacea	602.0
+Navicula_spp.	1338.5714285714287
+Coscinodiscus_nitidus	552.0
+Chaetoceros_pseudocurvisetus	1423.0
+Thalassiosira_ambigua	48.0
+Toxarium_hennedyanum	983.0
+Chaetoceros_cinctus 	99.0
+Thalassiosira_antiqua	415.0
+Skeletonema_costatum	129.33333333333334
+Achnanthes_sp.	603.0
+Coscinodiscus_radiatus	11389.0
+Odontella_aurita	3119.0
+Corethron_criophilum	1684.0
+Leptocylindrus_spp. 	1416.0
+Melosira_spp. 	1600.0
+Chaetoceros_cf. diadema	625.0
+Tabellaria_flocculosa 	271.0
+Fragilariopsis_cylindrus	26.0
+Proboscia_gracillima	1220.0
+Rhizosolenia_setigera f. pungens	1580.0
+Thalassionema_nitzschioides var. parva	115.0
+Pseudo-nitzschia_subpacifica	85.0
+Proboscia_subantarctica	2104.5
+Fragilariopsis_oceanica	98.0
+Gyrosigma_sp.	5694.0
+Diatoma_sp.	307.0
+Trachyneis_spp.	4495.0
+Roperia_tesselata	2250.0
+Thalassiosira_pseudonana	24.0
+Triceratium_spp.	1522.0
+Attheya_spp.	208.0
+Thalassiosira_cf. rotula	869.0
+Pseudo-nitzschia_spp.	283.0
+Bacteriastrum_solitarium	2667.0
+Chaetoceros_neglectus	85.0
+Rhizosolenia_acuminata	106214.0
+Porosira_sp.	16684.0
+Ditylum_spp.	13176.0
+Odontella_spp.	22685.0
+Aulacoseira_italica	467.0
+Neocalyptrella_robusta	365696.0
+Thalassiosira_frenguellii	925.0
+Chaetoceros_rostratus	449.0
+Denticula_sp.	100.0
+Navicula_directa 	329.0
+Proboscia_alata f. alata	1910.0
+Hemiaulus_membranaceus	2885.0
+Cylindrotheca_closterium	240.0
+Chaetoceros_atlanticus f. audax	463.0
+Synedra_nana	24.0
+Chaetoceros_tetrastichon 	313.0
+Corethron_pennatum	297.6666666666667
+Dactyliosolen_fragilissimus	7090.333333333333
+Navicula_transitans var. deresa f. delicatula	174.0
+Chaetoceros_diversus	98.5
+Corethron_sp.	4217.0
+Chaetoceros_externus	118.0
+Manguinea_fusiformis	1114.0
+Asterolampra_marylandica	6130.0
+Chaetoceros_flexuosus	138.0
+Pleurosigma_directum	5050.0
+Rhizosolenia_hebetata	9431.0
+Lyrella_sp.	2872.0
+Chaetoceros_cf. diversus 	39.0
+Chaetoceros_didymus	377.75
+Diploneis_bombus	2355.0
+Nitzschia_sicula	135.0
+Trichotoxon_sp.	4708.0
+Navicula_cf. directa 	329.0
+Stephanopyxis_sp.	4491.0
+Ethmodiscus_spp.	5113670.0
+Pseudo-nitzschia_pseudodelicatissima	149.0
+Plagiogramma_sp.	1285.5
+Bacteriastrum_hyalinum var. princeps	2438.0
+Chaetoceros_curvisetus	302.0
+Raphoneis_sp.	598.0
+Chaetoceros_seiracanthus	100.0
+Coscinodiscus_thorii	19312.0
+Striatella_unipunctata	3348.0
+Thalassiosira_adeliae	1304.0
+Chaetoceros_gracilis	143.0
+Navicula_cancellata	865.0
+Paralia_sulcata	5466.0
+Chaetoceros_cf. affinis	343.0
+Planktoniella_sol 	2451.0
+Chaetoceros_saltans	31.0
+Chaetoceros_furcellatus 	113.0
+Chaetoceros_aequatorialis	45.0
+Licmophora_ehrenbergii	232.0
+Rhizosolenia_castracanei	323584.0
+Coscinodiscus_wailesii	290934.0
+Thalassiosira_mendiolana	815.0
+Pleurosigma_rigidum	882.0
+Thalassiosira_profunda	8.0
+Melosira_nummuloides 	410.0
+Rhizosolenia_styliformis	35771.0
+Amphora_perpusilla	52.0
+Corethron_pelagicum	1222.0
+Pseudo-nitzschia_seriata	154.4
+Pleurosigma_cf. simonsenii	14742.0
+Fragilariopsis_pseudonana	26.0
+Nitzschia_bicapitata	26.0
+Guinardia_spp.	11072.0
+Mastogloia_sp.	1811.0
+Thalassiosira_rotula 	3260.6666666666665
+Fragilariopsis_curta	55.0
+Asteromphalus_cf. flabellatus	1022.0
+Neodenticula_seminae	260.0
+Asteromphalus_cf. heptactis	10845.0
+Bacteriastrum_spp.	2376.0
+Thalassionema_nitzschioides var. lanceolata	115.0
+Bacteriastrum_sp.	2376.0
+Pseudo-nitzschia_turgiduloides	25.5
+Lithodesmium_spp.	3289.0
+Tropidoneis_sp.	2387.0
+Campylodiscus_sp.	1314.0
+Rhizosolenia_polydactyla f. polydactyla	57171.0
+Thalassiosira_bioculata 	1773.0
+Nanoneis_haslea	5.0
+Neodenticula_sp.	99.0
+Paralia_spp. 	5466.0
+Pseudo-nitzschia_cf. subcurvata	24.0
+Psammodictyon_panduriforme	1007.0
+Thalassiosira_levanderi	54.0
+Pseudo-nitzschia_cf. pungens	74.0
+Thalassiothrix_longissima	2311.0
+Amphora_coffeaeformis	152.0
+Lithodesmium_sp.	3289.0
+Bacteriastrum_hyalinum	2438.0
+Charcotia_actinochilus	1321.0
+Chaetoceros_concavicornis	729.75
+Lauderia_annulata	4316.0
+Pseudo-nitzschia_lineola	28.4
+Thalassiosira_cf. oestrupii	1246.0
+Azpeitia_nodulifera	2032.0
+Chaetoceros_pacificus	421.0
+Cerataulina_sp.	3591.0
+Biddulphia_alternans	1339.0
+Haslea_ostrearia	1097.0
+Dactyliosolen_blavyanus	6000.0
+Chaetoceros_pelagicus 	22.0
+Rhabdonema_spp. 	493.0
+Synedropsis_spp.	52.0
+Proboscia_inermis	2324.75
+Helicotheca_tamesis	2800.0
+Stephanopyxis_nipponica	277.0
+Chaetoceros_phaeoceros	1247.25
+Thalassiosira_hispida 	324.0
+Thalassiosira_constricta	297.0
+Pseudo-nitzschia_heimii	95.2
+Helicotheca_spp.	2330.0
+Amphiprora_spp. 	893.0
+Asteromphalus_hyalinus	184.25
+Phaeodactylum_tricornutum	55.0
+Navicula_dithmarsica	98.0
+Entomoneis_alata	856.0
+Bellerochea_horologicalis	7284.0
+Odontella_granulata	2805.0
+Chaetoceros_cf. breve	395.0
+Rhizosolenia_longirostrum	394.0
+Cocconeis_sp.	505.0
+Navicula_salinarum	153.0
+Rhizosolenia_bergonii	29812.0
+Chaetoceros_teres	1936.0
+Actinoptychus_senarius	9589.0
+Pseudoeunotia_sp.	640.0
+Fragilariopsis_rhombica	189.0
+Trichotoxon_reinboldii	4708.0
+Pleurosigma_spp.	9287.0
+Attheya_septentrionalis	10.0
+Synedra_spathulata	417.0
+Nitzschia_decipiens	11.0
+Actinocyclus_octonarius	41676.0
+Haslea_sp. 	748.0
+Thalassionema_sp.	93.0
+Asterionella_bleakeleyi	131.0
+Trachyneis_aspera	1492.0
+Coscinodiscus_oculus-iridis	52528.0
+Nitzschia_bilobata	170.0
+Leptocylindrus_mediterraneus	1488.2222222222222
+Chaetoceros_compressus	421.0
+Asteromphalus_heptactis	10799.0
+Chaetoceros_borealis	837.0
+Phaeodactylum_spp.	55.0
+Actinocyclus_sp.	13575.0
+Membraneis_challengeri	12162.0
+Rhizosolenia_cf. delicatula	1315.0
+Thalassiothrix_cf. heteromorpha 	750.0
+Fragilaria_sp.	185.0
+Nitzschia_delicatissima	16.75
+Surirella_sp.	18551.0
+Pleurosigma_sp.	12235.0
+Rhizosolenia_hebetata f. semispina	6240.6
+Chaetoceros_whigamii	107.66666666666667
+Fragilariopsis_sp.	243.0
+Thalassiosira_cf. partheneia	276.0
+Thalassiosira_cf. gravida	221.0
+Skeletonema_sp.	193.0
+Fragilariopsis_kerguelensis	224.8
+Thalassiosira_oestrupii 	881.0
+Nitzschia_seriata	149.0
+Corethron_inerme	3674.5
+Climaconeis_lorenzii	998.0
+Asteromphalus_robustus	729.0
+Thalassiosira_subtilis	346.0
+Dactyliosolen_sp.	9039.0
+Biddulphia_spp. 	68263.0
+Rhizosolenia_clevei	100006.0
+Bacterosira_spp.	441.0
+Tabularia_fasciculata	247.0
+Podosira_stelligera	6579.0
+Chaetoceros_laciniosus	450.0
+Gyrosigma_balticum var. silimis	4934.0
+Synedra_sp.	1568.0
+Thalassionema_cf. nitzschioides	115.0
+Pseudo-nitzschia_sp.	411.0
+Rhizosolenia_sp.	755902.0
+Grammatophora_angulosa	75.0
+Diatoma_ vulgare	223.0
+Navicula_distans	968.0
+Chaetoceros_simplex	254.0
+Chaetoceros_vistulae	46.0
+Campylosira_cymbelliformis	74.0
+Gossleriella_tropica	4425.0
+Hannaea_arcus 	209.0
+Chaetoceros_convolutus 	262.2
+Trigonium_cinnamomeum	1316.0
+Hantzschia_weyprechtii 	185.0
+Biddulphia_pulchella	13657.0
+Chaetoceros_affinis var. willei	343.0
+Coscinodiscus_debilis	38576.0
+Corethron_spp.	4217.0
+Nitzschia_pacifica	133.0
+Fragilaria_islandica 	88.0
+Toxarium_undulatum	779.0
+Chaetoceros_lauderi	1195.0
+Stellarima_microtrias	5218.0
+Eucampia_cornuta	1925.0
+Epithemia_turgida	216.0
+Rhizosolenia_robusta	373173.0
+Odontella_mobiliensis	14745.0
+Chaetoceros_holsaticus 	293.0
+Pinnularia_spp. 	2918.0
+Gyrosigma_spp. 	2975.5
+Amphora_sp.	1252.6666666666667
+Detonula_sp.	1260.0
+Tabellaria_fenestrata	169.0
+Coscinodiscus_rotula	924.0
+Hemidiscus_cuneiformis	12974.0
+Climacosphenia_sp.	306.0
+Thalassiosira_lineata	646.0
+Bacillaria_cf. paxillifera 	413.0
+Coscinodiscus_excentricus 	2225.0
+Melosira_dubia 	132.0
+Cocconeis_scutellum var. ornata	164.0
+Odontella_sinensis	14745.0
+Tabellaria_spp. 	274.0
+Ephemera_cf. planamembranacea	723.0
+Asterionellopsis_spp.	195.0
+Plagiotropis_sp.	3230.0
+Leptocylindrus_sp.	1416.0
+Chaetoceros_messanensis	1435.0
+Coscinodiscus_marginatus	8883.0
+Thalassiosira_aestivalis	848.0
+Meuniera_spp.	2390.0
+Aulacoseira_granulata	223.66666666666666
+Tabellaria_sp.	274.0
+Coscinodiscus_sp.	267391.6666666667
+Proboscia_truncata	18951.0
+Asteromphalus_sp.	10434.0
+Ulnaria_ulna	588.0
+Coscinodiscus_spp.	162969.8
+Cosmioneis_lundstroemii	356.0
