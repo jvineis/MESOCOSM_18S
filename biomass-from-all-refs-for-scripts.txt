@@ -1388,3 +1388,4 @@
 1388	Thecate	spp.	152350	
 1389	Tintinnid	spp.	1198	
 1390	Akashiwo	sanguinea	1659	
+1391	Aloricate	spp.	280	
