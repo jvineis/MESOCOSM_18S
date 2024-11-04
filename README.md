@@ -1,5 +1,5 @@
 # MESOCOSM_18S
-This git contains the code and steps to process the v4 region of the 18S rRNA gene and other supplemental data associated with the manuscript Co-occurrence and successional patterns among diatoms, dinoflagellates, and potential parasites in a coastal upwelling experiment. The steps for amplicon library construction are outlined in the publication links to this git and detailed steps are contained in the "16S v4 18s Amplicon Protocol for Illumina Sequencing.doc", located in the code tab of this git repository. Most of the code below contains information for the SLURM scheduler as well. Note to self, you are working here /scratch/gpfs/WARD/JOE/MOSS_BLOOM/18S_20220502_Data.
+This git contains the code and steps to process the v4 region of the 18S rRNA gene and other supplemental data associated with the manuscript Co-occurrence and successional patterns among diatoms, dinoflagellates, and potential parasites in a coastal upwelling experiment. 
 
 ### Code required for this tutorial and links to the conda install or more specific install instructions. 
     illumina-utilities: conda install -c bioconda illumina-utils
@@ -7,27 +7,7 @@ This git contains the code and steps to process the v4 region of the 18S rRNA ge
     vsearch: conda install -c bioconda vsearch
     oligotyping:install the latest stable release (artistic mode) https://merenlab.org/2014/08/16/installing-the-oligotyping-pipeline/
 
-### Quality filtering: 
-
-#### Following the sequencing of samples, the libraries require demultiplexing, unless this was handled by the core facility. The demultiplexed raw data for the MLML v4 sequences can be found here (link to SRA accession numbers) and the unknown fastq files used for the demultiplexing steps are available upon request. The sample to barcode file used below can be found in the code tab in this repository. 
-
-#### First I had to trim the barcodes in the barcode_to_sample.txt file because the length of the barcodes in the sequencing run were eitht bases, but the barcodes in the illumina samplesheet are 10 bases. Here is a simple script to do this which is also found in the code tab of this repository.
-
-    python x_trim-barcodes.py barcode_to_sample.txt barcode_to_sample_8index.txt
-    
-#### Second, I ran the demultiplexing step. 
-
-    #!/bin/bash
-    #
-    #SBATCH --nodes=1
-    #SBATCH --tasks-per-node=20
-    #SBATCH --time=00:30:00
-    #SBATCH --mem=80Gb
-
-    iu-demultiplex -s barcode_to_sample_8index.txt --r1 4491__Ward-MOSS-18s-amplicons-and-metagenomics_pool_A-for-516-cycles-000000000-DG7K7_1_Read_1_passed_filter.fastq --r2 4491__Ward-MOSS-18s-amplicons-and-metagenomics_pool_A-for-516-cycles-000000000-DG7K7_1_Read_4_passed_filter.fastq --index 4491__Ward-MOSS-18s-amplicons-and-metagenomics_pool_A-for-516-cycles-000000000-DG7K7_1_Read_2_Index_Read_passed_filter.fastq -o DEMULTIPLEX
-    
-    
-#### Third, merge the demultiplexed sequences
+### First download the sequences from the Short Read Archive https://dataview.ncbi.nlm.nih.gov/object/PRJNA1060340?reviewer=ciehuil2a33fpn566l3kq3clsq. 
 
 ##### before you can merge, you need .ini files which can be made like this, but will depend on your sample names.. Be careful here to make sure you create the "x_18S-samples.txt" name right so it will work properly with your array command. 
 
