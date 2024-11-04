@@ -9,10 +9,10 @@ This git contains the code and steps to process the v4 region of the 18S rRNA ge
 
 ### First download the sequences from the Short Read Archive https://dataview.ncbi.nlm.nih.gov/object/PRJNA1060340?reviewer=ciehuil2a33fpn566l3kq3clsq. 
 
-##### before you can merge, you need .ini files which can be made like this, but will depend on your sample names.. Be careful here to make sure you create the "x_18S-samples.txt" name right so it will work properly with your array command. 
+##### before you can merge, you need .ini files which can be made according to the command below and the 00_DEMULTIPLEXING_18S can be found in the Code section of this git. 
 
     iu-gen-configs 00_DEMULTIPLEXING_18S --r1-prefix ^GTG[C,T]CAGC[A,C]GCCGCGGTAA --r2-prefix ^TTGG[C,T][A,G]AATGCTTTCGC
-    ls *.ini | sed 's/\.ini//g' | grep 18S> x_18S-samples.txt
+    ls *.ini | sed 's/\.ini//g' | grep 18S > x_18S-samples.txt
     
 ##### now you can merge the sequnces for each sample and use vsearch to dereplicate each sample separately. 
 
