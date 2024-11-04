@@ -1,5 +1,5 @@
 # MESOCOSM_18S
-This git contains the code and steps to process the v4 region of the 18S rRNA gene. The steps for amplicon library construction are outlined in publication links to this git and detailed steps are contained in the "16S v4 18s Amplicon Protocol for Illumina Sequencing.doc", located in the code tab of this git repository. Most of the code below contains information for the SLURM scheduler as well. Note to self, you are working here /scratch/gpfs/WARD/JOE/MOSS_BLOOM/18S_20220502_Data.
+This git contains the code and steps to process the v4 region of the 18S rRNA gene and other supplemental data associated with the manuscript Co-occurrence and successional patterns among diatoms, dinoflagellates, and potential parasites in a coastal upwelling experiment. The steps for amplicon library construction are outlined in the publication links to this git and detailed steps are contained in the "16S v4 18s Amplicon Protocol for Illumina Sequencing.doc", located in the code tab of this git repository. Most of the code below contains information for the SLURM scheduler as well. Note to self, you are working here /scratch/gpfs/WARD/JOE/MOSS_BLOOM/18S_20220502_Data.
 
 ### Code required for this tutorial and links to the conda install or more specific install instructions. 
     illumina-utilities: conda install -c bioconda illumina-utils
