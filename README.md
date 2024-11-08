@@ -1,7 +1,7 @@
 # MESOCOSM_18S
 This git contains the code and steps to process the v4 region of the 18S rRNA gene and other supplemental data associated with the manuscript - "Co-occurrence and successional patterns among diatoms, dinoflagellates, and potential parasites in a coastal upwelling experiment". 
 
-### Code required for this tutorial and links to the conda install or more specific install instructions. 
+## Code required for this tutorial and links to the conda install or more specific install instructions. 
     illumina-utilities: conda install -c bioconda illumina-utils
     anvio-7.1: https://anvio.org/install/
     vsearch: conda install -c bioconda vsearch
