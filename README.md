@@ -54,8 +54,7 @@
     ## 5. Chimera cheking
     #vsearch --uchime_denovo pooled-samples-node-representatives-sorted.fa --uchimeout pooled-samples-node-representatives-sorted.uchime
 
-### The database for the PR2 taxonomy that you will want to use for the taxonomic assignment of your SWARM ASVs can be found here
-https://github.com/pr2database/pr2database/releases.  You will need to have the fasta "pr2_version_4.14.0_SSU_mothur.fasta" and the tax id file "SILVA_138.1_SSURef_NR99_tax_silva-fixed.tax" found in this git for the taxonomic assignment. Below is the general slurm script to run the taxonomy. You will need to make sure that vsearch is active. 
+### The database for the metaPR2 taxonomy that you will want to use for the taxonomic assignment of your SWARM ASVs is contained in this git "metapr2.fa"  Below is the general slurm script to run the taxonomy. You will need to make sure that vsearch is active. 
 
     #!/bin/bash
 
@@ -64,17 +63,8 @@ https://github.com/pr2database/pr2database/releases.  You will need to have the 
     #SBATCH --time=00:30:00
     #SBATCH --mem=8Gb
 
-    vsearch --usearch_global pooled-samples-node-representatives-sorted.fa --db /scratch/gpfs/WARD/JOE/DBs/pr2_version_4.14.0_SSU_mothur.fasta --blast6out NODE-HITS-PR2.txt --id 0.4
-    
- #### The vsearch command above provides taxonomy ids, but not taxonomy strings for each of the unique swarm IDs in your file. The script below will create a new file that contains the swarm ID and the taxonoimic string.. because the string is what we are really after. Position one in the script is the output from the command above, position 2 is the location of the tax file you downloaded for PR2 and position 3 is the name of the output file name of your choosing.. I would keep it consistent with what I have named it in order to simplify life downstream. 
- 
-    #!/bin/bash
+    vsearch --usearch_global pooled-samples-node-representatives-sorted.fa --db metapr2.fa --blast6out NODE-HITS-metapr2.txt --id 0.6
 
-    #SBATCH --nodes=1
-    #SBATCH --tasks-per-node=1
-    #SBATCH --time=00:30:00
-    #SBATCH --mem=80Gb
-    python combine-node-hits-with-tax-strings.py NODE-HITS-PR2.txt /scratch/gpfs/WARD/JOE/DBs/pr2_version_4.14.0_SSU_mothur.tax NODE-HITS-PR2-tax_strings.txt
     
 ### Look for chimeric sequences in in the pooled-samples-node-representatives-sorted.fa file using vsearch
 
